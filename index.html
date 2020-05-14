@@ -14,14 +14,20 @@
   <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
   <!-- FontAwesome CSS -->
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <!-- Jquery -->
+  <link rel="stylesheet" href="css/jquery.css">
 </head>
 
 <body>
 
   <div class="container">
       <nav class="menu">
-
-          <ul>
+        <button aria-expanded="false" aria-controls="menu-list">
+          <span class="open">☰</span>
+          <span class="close">×</span>
+          Menu
+        </button>
+          <ul id="menu-list">
             <li><a href="404-page.html">Main Meal</a></li>
             <li><a href="404-page.html">Drinks</a></li>
             <li><a href="404-page.html">Wines</a></li>
@@ -34,7 +40,8 @@
   <div class="container">
     <div class="top">
       <header class="top1">
-       
+        <h1>Praise's African Dishes</h1>
+        <p>Pretty Good Dishes!</p>
       
       </header>
       
@@ -75,22 +82,22 @@
   </div>
 
   <div class="container">
-    <section class="feature">
+    <div class="feature">
       <div class="row">
-        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+        <div class="col-sm-6 col-md-6 col-xl-3">
           <div class="feature1">
           <img src="img/Afang-Soup.jpg">
           </div>
-      </div>
+        </div>
      
-      <div class="col-sm-12 col-12">
+      <div class="col-sm-3 col-md-6 col-xl-6 right">
         <h2>Featured Meal</h2>
         <p>Very nutritious, medicinal  and loaded with vegetables.</p>
         <p>This is the one you have been waiting for</p>
         <button>Learn More</button>
       </div>
     </div>
-    </section>
+  </div>
   </div>
 
   <div class="container">
@@ -168,9 +175,20 @@
       </div>
 </div>
 </div>
-  </section>
+  
+</section>
   </div>
 
+  <script>
+    const navButton = document.querySelector('button[aria-expanded]');
+​
+    function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+    }
+​
+    navButton.addEventListener('click', toggleNav);
+  </script>
 
   
 </body>
