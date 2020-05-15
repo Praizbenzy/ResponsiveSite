@@ -26,6 +26,10 @@ img {
   display: grid;
   grid-gap: 20px;
 }
+.container {
+  display: grid;
+  padding: 5px;
+}
 
 .top {
   display: grid;
