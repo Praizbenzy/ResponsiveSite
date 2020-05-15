@@ -152,6 +152,10 @@ img {
   align-items: center;
   margin-left: 20px;
 }
+.about_details {
+ 
+  margin-left: 20px;
+}
 
 /* Gallery! */
 .t-block { }
