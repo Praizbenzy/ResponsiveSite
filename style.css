@@ -150,6 +150,7 @@ img {
   display: grid;
   grid-template-columns: 400px 1fr;
   align-items: center;
+  margin-left: 20px;
 }
 
 /* Gallery! */
